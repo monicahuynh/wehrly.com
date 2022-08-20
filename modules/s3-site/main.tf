@@ -37,6 +37,8 @@ resource "aws_s3_bucket" "site" {
   }
 }
 
+# TODO: Should / can we try to make this something we can pass in from the top ... ?
+
 # Note: Creating this route53 zone is not enough. The domain's name servers need to point to the NS
 # servers of the route53 zone. Otherwise the DNS lookup will fail.
 # To verify that the dns lookup succeeds: `dig site @nameserver`
