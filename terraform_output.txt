@@ -1,0 +1,479 @@
+0m1mmodule.www-site.aws_route53_zone.main: Refreshing state... [id=Z338L3MCT403SF]0m
+0m1mmodule.eric-site.aws_s3_bucket.site: Refreshing state... [id=eric.wehrly.com]0m
+0m1mmodule.eric-site.aws_route53_zone.main: Refreshing state... [id=Z338L3MCT403SF]0m
+0m1mmodule.www-site.aws_s3_bucket.site: Refreshing state... [id=www.wehrly.com]0m
+0m1mmodule.www-site.aws_cloudfront_distribution.cdn: Refreshing state... [id=E33QRFYXGEDL3Z]0m
+0m1mmodule.eric-site.aws_cloudfront_distribution.cdn: Refreshing state... [id=EGO7EIO7RTKIL]0m
+0m1mmodule.eric-site.aws_route53_record.root_domain: Refreshing state... [id=Z338L3MCT403SF_eric.wehrly.com_A]0m
+0m1mmodule.www-site.aws_route53_record.root_domain: Refreshing state... [id=Z338L3MCT403SF_www.wehrly.com_A]0m
+0m
+1m36mNote:0m1m Objects have changed outside of Terraform0m
+
+0mTerraform detected the following changes made outside of Terraform since the
+last "terraform apply":
+
+1m  # module.eric-site.aws_cloudfront_distribution.cdn0m has changed0m0m
+0m  33m~0m0m resource "aws_cloudfront_distribution" "cdn" {
+        1m0mid0m0m                             = "EGO7EIO7RTKIL"
+      32m+0m 0m1m0mstaging0m0m                        = false
+        1m0mtags0m0m                           = {}
+        90m# (19 unchanged attributes hidden)0m0m
+
+
+      32m+0m 0morigin {
+          32m+0m 0m1m0mconnection_attempts0m0m = 3
+          32m+0m 0m1m0mconnection_timeout0m0m  = 10
+          32m+0m 0m1m0mdomain_name0m0m         = "eric.wehrly.com.s3.amazonaws.com"
+          32m+0m 0m1m0morigin_id0m0m           = "eric.wehrly.com"
+        }
+      31m-0m 0morigin {
+          31m-0m 0m1m0mconnection_attempts0m0m = 3 90m->0m 0m90mnull0m0m
+          31m-0m 0m1m0mconnection_timeout0m0m  = 10 90m->0m 0m90mnull0m0m
+          31m-0m 0m1m0mdomain_name0m0m         = "eric.wehrly.com.s3.amazonaws.com" 90m->0m 0m90mnull0m0m
+          31m-0m 0m1m0morigin_id0m0m           = "eric.wehrly.com" 90m->0m 0m90mnull0m0m
+        }
+
+
+        90m# (3 unchanged blocks hidden)0m0m
+    }
+
+1m  # module.eric-site.aws_route53_record.root_domain0m has changed0m0m
+0m  33m~0m0m resource "aws_route53_record" "root_domain" {
+        1m0mid0m0m                               = "Z338L3MCT403SF_eric.wehrly.com_A"
+      32m+0m 0m1m0mmultivalue_answer_routing_policy0m0m = false
+        1m0mname0m0m                             = "eric.wehrly.com"
+        90m# (5 unchanged attributes hidden)0m0m
+
+        90m# (1 unchanged block hidden)0m0m
+    }
+
+1m  # module.eric-site.aws_route53_zone.main0m has changed0m0m
+0m  33m~0m0m resource "aws_route53_zone" "main" {
+        1m0mid0m0m                  = "Z338L3MCT403SF"
+        1m0mname0m0m                = "wehrly.com"
+      32m+0m 0m1m0mprimary_name_server0m0m = "ns-27.awsdns-03.com"
+        1m0mtags0m0m                = {}
+        90m# (6 unchanged attributes hidden)0m0m
+    }
+
+1m  # module.eric-site.aws_s3_bucket.site0m has changed0m0m
+0m  33m~0m0m resource "aws_s3_bucket" "site" {
+      33m~0m 0m1m0mbucket_regional_domain_name0m0m = "eric.wehrly.com.s3.amazonaws.com" 33m->0m 0m"eric.wehrly.com.s3.us-east-1.amazonaws.com"
+        1m0mid0m0m                          = "eric.wehrly.com"
+        1m0mtags0m0m                        = {}
+        90m# (13 unchanged attributes hidden)0m0m
+
+      32m+0m 0mgrant {
+          32m+0m 0m1m0mpermissions0m0m = [
+              32m+0m 0m"READ",
+            ]
+          32m+0m 0m1m0mtype0m0m        = "Group"
+          32m+0m 0m1m0muri0m0m         = "http://acs.amazonaws.com/groups/global/AllUsers"
+        }
+      32m+0m 0mgrant {
+          32m+0m 0m1m0mid0m0m          = "0375be2831d510f5a56e4538a24213259bbca3fb66d0750792d5d04a629b21d1"
+          32m+0m 0m1m0mpermissions0m0m = [
+              32m+0m 0m"FULL_CONTROL",
+            ]
+          32m+0m 0m1m0mtype0m0m        = "CanonicalUser"
+        }
+
+      32m+0m 0mserver_side_encryption_configuration {
+          32m+0m 0mrule {
+              32m+0m 0m1m0mbucket_key_enabled0m0m = false
+
+              32m+0m 0mapply_server_side_encryption_by_default {
+                  32m+0m 0m1m0msse_algorithm0m0m = "AES256"
+                }
+            }
+        }
+
+
+        90m# (2 unchanged blocks hidden)0m0m
+    }
+
+1m  # module.www-site.aws_cloudfront_distribution.cdn0m has changed0m0m
+0m  33m~0m0m resource "aws_cloudfront_distribution" "cdn" {
+        1m0mid0m0m                             = "E33QRFYXGEDL3Z"
+      32m+0m 0m1m0mstaging0m0m                        = false
+        1m0mtags0m0m                           = {}
+        90m# (19 unchanged attributes hidden)0m0m
+
+
+      32m+0m 0morigin {
+          32m+0m 0m1m0mconnection_attempts0m0m = 3
+          32m+0m 0m1m0mconnection_timeout0m0m  = 10
+          32m+0m 0m1m0mdomain_name0m0m         = "www.wehrly.com.s3.amazonaws.com"
+          32m+0m 0m1m0morigin_id0m0m           = "www.wehrly.com"
+        }
+      31m-0m 0morigin {
+          31m-0m 0m1m0mconnection_attempts0m0m = 3 90m->0m 0m90mnull0m0m
+          31m-0m 0m1m0mconnection_timeout0m0m  = 10 90m->0m 0m90mnull0m0m
+          31m-0m 0m1m0mdomain_name0m0m         = "www.wehrly.com.s3.amazonaws.com" 90m->0m 0m90mnull0m0m
+          31m-0m 0m1m0morigin_id0m0m           = "www.wehrly.com" 90m->0m 0m90mnull0m0m
+        }
+
+
+        90m# (3 unchanged blocks hidden)0m0m
+    }
+
+1m  # module.www-site.aws_route53_record.root_domain0m has changed0m0m
+0m  33m~0m0m resource "aws_route53_record" "root_domain" {
+        1m0mid0m0m                               = "Z338L3MCT403SF_www.wehrly.com_A"
+      32m+0m 0m1m0mmultivalue_answer_routing_policy0m0m = false
+        1m0mname0m0m                             = "www.wehrly.com"
+      32m+0m 0m1m0mrecords0m0m                          = []
+      32m+0m 0m1m0mttl0m0m                              = 0
+        90m# (3 unchanged attributes hidden)0m0m
+
+        90m# (1 unchanged block hidden)0m0m
+    }
+
+1m  # module.www-site.aws_route53_zone.main0m has changed0m0m
+0m  33m~0m0m resource "aws_route53_zone" "main" {
+        1m0mid0m0m                  = "Z338L3MCT403SF"
+        1m0mname0m0m                = "wehrly.com"
+      32m+0m 0m1m0mprimary_name_server0m0m = "ns-27.awsdns-03.com"
+        1m0mtags0m0m                = {}
+        90m# (6 unchanged attributes hidden)0m0m
+    }
+
+1m  # module.www-site.aws_s3_bucket.site0m has changed0m0m
+0m  33m~0m0m resource "aws_s3_bucket" "site" {
+      33m~0m 0m1m0mbucket_regional_domain_name0m0m = "www.wehrly.com.s3.amazonaws.com" 33m->0m 0m"www.wehrly.com.s3.us-east-1.amazonaws.com"
+        1m0mid0m0m                          = "www.wehrly.com"
+        1m0mtags0m0m                        = {}
+        90m# (13 unchanged attributes hidden)0m0m
+
+      32m+0m 0mgrant {
+          32m+0m 0m1m0mpermissions0m0m = [
+              32m+0m 0m"READ",
+            ]
+          32m+0m 0m1m0mtype0m0m        = "Group"
+          32m+0m 0m1m0muri0m0m         = "http://acs.amazonaws.com/groups/global/AllUsers"
+        }
+      32m+0m 0mgrant {
+          32m+0m 0m1m0mid0m0m          = "0375be2831d510f5a56e4538a24213259bbca3fb66d0750792d5d04a629b21d1"
+          32m+0m 0m1m0mpermissions0m0m = [
+              32m+0m 0m"FULL_CONTROL",
+            ]
+          32m+0m 0m1m0mtype0m0m        = "CanonicalUser"
+        }
+
+      32m+0m 0mserver_side_encryption_configuration {
+          32m+0m 0mrule {
+              32m+0m 0m1m0mbucket_key_enabled0m0m = false
+
+              32m+0m 0mapply_server_side_encryption_by_default {
+                  32m+0m 0m1m0msse_algorithm0m0m = "AES256"
+                }
+            }
+        }
+
+
+        90m# (2 unchanged blocks hidden)0m0m
+    }
+
+
+Unless you have made equivalent changes to your configuration, or ignored the
+relevant attributes using ignore_changes, the following plan may include
+actions to undo or respond to these changes.
+90m
+─────────────────────────────────────────────────────────────────────────────0m
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  32m+0m create
+0m
+Terraform will perform the following actions:
+
+1m  # module.wedding-site.aws_cloudfront_distribution.cdn0m will be created0m0m
+0m  32m+0m0m resource "aws_cloudfront_distribution" "cdn" {
+      32m+0m 0m1m0maliases0m0m                         = [
+          32m+0m 0m"wedding.wehrly.com",
+        ]
+      32m+0m 0m1m0marn0m0m                             = (known after apply)
+      32m+0m 0m1m0mcaller_reference0m0m                = (known after apply)
+      32m+0m 0m1m0mcontinuous_deployment_policy_id0m0m = (known after apply)
+      32m+0m 0m1m0mdefault_root_object0m0m             = "index.html"
+      32m+0m 0m1m0mdomain_name0m0m                     = (known after apply)
+      32m+0m 0m1m0menabled0m0m                         = true
+      32m+0m 0m1m0metag0m0m                            = (known after apply)
+      32m+0m 0m1m0mhosted_zone_id0m0m                  = (known after apply)
+      32m+0m 0m1m0mhttp_version0m0m                    = "http2"
+      32m+0m 0m1m0mid0m0m                              = (known after apply)
+      32m+0m 0m1m0min_progress_validation_batches0m0m  = (known after apply)
+      32m+0m 0m1m0mis_ipv6_enabled0m0m                 = false
+      32m+0m 0m1m0mlast_modified_time0m0m              = (known after apply)
+      32m+0m 0m1m0mprice_class0m0m                     = "PriceClass_100"
+      32m+0m 0m1m0mretain_on_delete0m0m                = false
+      32m+0m 0m1m0mstaging0m0m                         = false
+      32m+0m 0m1m0mstatus0m0m                          = (known after apply)
+      32m+0m 0m1m0mtags_all0m0m                        = (known after apply)
+      32m+0m 0m1m0mtrusted_key_groups0m0m              = (known after apply)
+      32m+0m 0m1m0mtrusted_signers0m0m                 = (known after apply)
+      32m+0m 0m1m0mwait_for_deployment0m0m             = true
+
+      32m+0m 0mdefault_cache_behavior {
+          32m+0m 0m1m0mallowed_methods0m0m        = [
+              32m+0m 0m"GET",
+              32m+0m 0m"HEAD",
+              32m+0m 0m"OPTIONS",
+            ]
+          32m+0m 0m1m0mcached_methods0m0m         = [
+              32m+0m 0m"GET",
+              32m+0m 0m"HEAD",
+            ]
+          32m+0m 0m1m0mcompress0m0m               = false
+          32m+0m 0m1m0mdefault_ttl0m0m            = 3600
+          32m+0m 0m1m0mmax_ttl0m0m                = 86400
+          32m+0m 0m1m0mmin_ttl0m0m                = 0
+          32m+0m 0m1m0mtarget_origin_id0m0m       = "wedding.wehrly.com"
+          32m+0m 0m1m0mtrusted_key_groups0m0m     = (known after apply)
+          32m+0m 0m1m0mtrusted_signers0m0m        = (known after apply)
+          32m+0m 0m1m0mviewer_protocol_policy0m0m = "allow-all"
+
+          32m+0m 0mforwarded_values {
+              32m+0m 0m1m0mheaders0m0m                 = (known after apply)
+              32m+0m 0m1m0mquery_string0m0m            = true
+              32m+0m 0m1m0mquery_string_cache_keys0m0m = (known after apply)
+
+              32m+0m 0mcookies {
+                  32m+0m 0m1m0mforward0m0m           = "none"
+                  32m+0m 0m1m0mwhitelisted_names0m0m = (known after apply)
+                }
+            }
+        }
+
+      32m+0m 0morigin {
+          32m+0m 0m1m0mconnection_attempts0m0m = 3
+          32m+0m 0m1m0mconnection_timeout0m0m  = 10
+          32m+0m 0m1m0mdomain_name0m0m         = "wedding.wehrly.com.s3.amazonaws.com"
+          32m+0m 0m1m0morigin_id0m0m           = "wedding.wehrly.com"
+        }
+
+      32m+0m 0mrestrictions {
+          32m+0m 0mgeo_restriction {
+              32m+0m 0m1m0mlocations0m0m        = (known after apply)
+              32m+0m 0m1m0mrestriction_type0m0m = "none"
+            }
+        }
+
+      32m+0m 0mviewer_certificate {
+          32m+0m 0m1m0macm_certificate_arn0m0m      = "arn:aws:acm:us-east-1:428933486948:certificate/1f1c2305-429b-4889-8b08-77ce681f18b1"
+          32m+0m 0m1m0mminimum_protocol_version0m0m = "TLSv1"
+          32m+0m 0m1m0mssl_support_method0m0m       = "sni-only"
+        }
+    }
+
+1m  # module.wedding-site.aws_route53_record.root_domain0m will be created0m0m
+0m  32m+0m0m resource "aws_route53_record" "root_domain" {
+      32m+0m 0m1m0mallow_overwrite0m0m = (known after apply)
+      32m+0m 0m1m0mfqdn0m0m            = (known after apply)
+      32m+0m 0m1m0mid0m0m              = (known after apply)
+      32m+0m 0m1m0mname0m0m            = "wedding.wehrly.com"
+      32m+0m 0m1m0mtype0m0m            = "A"
+      32m+0m 0m1m0mzone_id0m0m         = (known after apply)
+
+      32m+0m 0malias {
+          32m+0m 0m1m0mevaluate_target_health0m0m = false
+          32m+0m 0m1m0mname0m0m                   = (known after apply)
+          32m+0m 0m1m0mzone_id0m0m                = (known after apply)
+        }
+    }
+
+1m  # module.wedding-site.aws_route53_zone.main0m will be created0m0m
+0m  32m+0m0m resource "aws_route53_zone" "main" {
+      32m+0m 0m1m0marn0m0m                 = (known after apply)
+      32m+0m 0m1m0mcomment0m0m             = "Managed by Terraform"
+      32m+0m 0m1m0mforce_destroy0m0m       = false
+      32m+0m 0m1m0mid0m0m                  = (known after apply)
+      32m+0m 0m1m0mname0m0m                = "wehrly.com"
+      32m+0m 0m1m0mname_servers0m0m        = (known after apply)
+      32m+0m 0m1m0mprimary_name_server0m0m = (known after apply)
+      32m+0m 0m1m0mtags_all0m0m            = (known after apply)
+      32m+0m 0m1m0mzone_id0m0m             = (known after apply)
+    }
+
+1m  # module.wedding-site.aws_s3_bucket.site0m will be created0m0m
+0m  32m+0m0m resource "aws_s3_bucket" "site" {
+      32m+0m 0m1m0macceleration_status0m0m         = (known after apply)
+      32m+0m 0m1m0macl0m0m                         = "public-read"
+      32m+0m 0m1m0marn0m0m                         = (known after apply)
+      32m+0m 0m1m0mbucket0m0m                      = "wedding.wehrly.com"
+      32m+0m 0m1m0mbucket_domain_name0m0m          = (known after apply)
+      32m+0m 0m1m0mbucket_prefix0m0m               = (known after apply)
+      32m+0m 0m1m0mbucket_regional_domain_name0m0m = (known after apply)
+      32m+0m 0m1m0mforce_destroy0m0m               = false
+      32m+0m 0m1m0mhosted_zone_id0m0m              = (known after apply)
+      32m+0m 0m1m0mid0m0m                          = (known after apply)
+      32m+0m 0m1m0mobject_lock_enabled0m0m         = (known after apply)
+      32m+0m 0m1m0mpolicy0m0m                      = jsonencode(
+            {
+              32m+0m 0mStatement = [
+                  32m+0m 0m{
+                      32m+0m 0mAction    = [
+                          32m+0m 0m"s3:GetObject",
+                        ]
+                      32m+0m 0mEffect    = "Allow"
+                      32m+0m 0mPrincipal = {
+                          32m+0m 0mAWS = "*"
+                        }
+                      32m+0m 0mResource  = [
+                          32m+0m 0m"arn:aws:s3:::wedding.wehrly.com/*",
+                        ]
+                      32m+0m 0mSid       = "AllowPublicRead"
+                    },
+                ]
+              32m+0m 0mVersion   = "2008-10-17"
+            }
+        )
+      32m+0m 0m1m0mregion0m0m                      = (known after apply)
+      32m+0m 0m1m0mrequest_payer0m0m               = (known after apply)
+      32m+0m 0m1m0mtags_all0m0m                    = (known after apply)
+      32m+0m 0m1m0mwebsite_domain0m0m              = (known after apply)
+      32m+0m 0m1m0mwebsite_endpoint0m0m            = (known after apply)
+
+      32m+0m 0mcors_rule {
+          32m+0m 0m1m0mallowed_headers0m0m = (known after apply)
+          32m+0m 0m1m0mallowed_methods0m0m = (known after apply)
+          32m+0m 0m1m0mallowed_origins0m0m = (known after apply)
+          32m+0m 0m1m0mexpose_headers0m0m  = (known after apply)
+          32m+0m 0m1m0mmax_age_seconds0m0m = (known after apply)
+        }
+
+      32m+0m 0mgrant {
+          32m+0m 0m1m0mid0m0m          = (known after apply)
+          32m+0m 0m1m0mpermissions0m0m = (known after apply)
+          32m+0m 0m1m0mtype0m0m        = (known after apply)
+          32m+0m 0m1m0muri0m0m         = (known after apply)
+        }
+
+      32m+0m 0mlifecycle_rule {
+          32m+0m 0m1m0mabort_incomplete_multipart_upload_days0m0m = (known after apply)
+          32m+0m 0m1m0menabled0m0m                                = (known after apply)
+          32m+0m 0m1m0mid0m0m                                     = (known after apply)
+          32m+0m 0m1m0mprefix0m0m                                 = (known after apply)
+          32m+0m 0m1m0mtags0m0m                                   = (known after apply)
+
+          32m+0m 0mexpiration {
+              32m+0m 0m1m0mdate0m0m                         = (known after apply)
+              32m+0m 0m1m0mdays0m0m                         = (known after apply)
+              32m+0m 0m1m0mexpired_object_delete_marker0m0m = (known after apply)
+            }
+
+          32m+0m 0mnoncurrent_version_expiration {
+              32m+0m 0m1m0mdays0m0m = (known after apply)
+            }
+
+          32m+0m 0mnoncurrent_version_transition {
+              32m+0m 0m1m0mdays0m0m          = (known after apply)
+              32m+0m 0m1m0mstorage_class0m0m = (known after apply)
+            }
+
+          32m+0m 0mtransition {
+              32m+0m 0m1m0mdate0m0m          = (known after apply)
+              32m+0m 0m1m0mdays0m0m          = (known after apply)
+              32m+0m 0m1m0mstorage_class0m0m = (known after apply)
+            }
+        }
+
+      32m+0m 0mlogging {
+          32m+0m 0m1m0mtarget_bucket0m0m = (known after apply)
+          32m+0m 0m1m0mtarget_prefix0m0m = (known after apply)
+        }
+
+      32m+0m 0mobject_lock_configuration {
+          32m+0m 0m1m0mobject_lock_enabled0m0m = (known after apply)
+
+          32m+0m 0mrule {
+              32m+0m 0mdefault_retention {
+                  32m+0m 0m1m0mdays0m0m  = (known after apply)
+                  32m+0m 0m1m0mmode0m0m  = (known after apply)
+                  32m+0m 0m1m0myears0m0m = (known after apply)
+                }
+            }
+        }
+
+      32m+0m 0mreplication_configuration {
+          32m+0m 0m1m0mrole0m0m = (known after apply)
+
+          32m+0m 0mrules {
+              32m+0m 0m1m0mdelete_marker_replication_status0m0m = (known after apply)
+              32m+0m 0m1m0mid0m0m                               = (known after apply)
+              32m+0m 0m1m0mprefix0m0m                           = (known after apply)
+              32m+0m 0m1m0mpriority0m0m                         = (known after apply)
+              32m+0m 0m1m0mstatus0m0m                           = (known after apply)
+
+              32m+0m 0mdestination {
+                  32m+0m 0m1m0maccount_id0m0m         = (known after apply)
+                  32m+0m 0m1m0mbucket0m0m             = (known after apply)
+                  32m+0m 0m1m0mreplica_kms_key_id0m0m = (known after apply)
+                  32m+0m 0m1m0mstorage_class0m0m      = (known after apply)
+
+                  32m+0m 0maccess_control_translation {
+                      32m+0m 0m1m0mowner0m0m = (known after apply)
+                    }
+
+                  32m+0m 0mmetrics {
+                      32m+0m 0m1m0mminutes0m0m = (known after apply)
+                      32m+0m 0m1m0mstatus0m0m  = (known after apply)
+                    }
+
+                  32m+0m 0mreplication_time {
+                      32m+0m 0m1m0mminutes0m0m = (known after apply)
+                      32m+0m 0m1m0mstatus0m0m  = (known after apply)
+                    }
+                }
+
+              32m+0m 0mfilter {
+                  32m+0m 0m1m0mprefix0m0m = (known after apply)
+                  32m+0m 0m1m0mtags0m0m   = (known after apply)
+                }
+
+              32m+0m 0msource_selection_criteria {
+                  32m+0m 0msse_kms_encrypted_objects {
+                      32m+0m 0m1m0menabled0m0m = (known after apply)
+                    }
+                }
+            }
+        }
+
+      32m+0m 0mserver_side_encryption_configuration {
+          32m+0m 0mrule {
+              32m+0m 0m1m0mbucket_key_enabled0m0m = (known after apply)
+
+              32m+0m 0mapply_server_side_encryption_by_default {
+                  32m+0m 0m1m0mkms_master_key_id0m0m = (known after apply)
+                  32m+0m 0m1m0msse_algorithm0m0m     = (known after apply)
+                }
+            }
+        }
+
+      32m+0m 0mversioning {
+          32m+0m 0m1m0menabled0m0m    = (known after apply)
+          32m+0m 0m1m0mmfa_delete0m0m = (known after apply)
+        }
+
+      32m+0m 0mwebsite {
+          32m+0m 0m1m0mindex_document0m0m = "index.html"
+        }
+    }
+
+0m1mPlan:0m 4 to add, 0 to change, 0 to destroy.
+0m33m╷0m0m
+33m│0m 0m1m33mWarning: 0m0m1mArgument is deprecated0m
+33m│0m 0m
+33m│0m 0m0m  with module.eric-site.aws_s3_bucket.site,
+33m│0m 0m  on modules\s3-site\main.tf line 18, in resource "aws_s3_bucket" "site":
+33m│0m 0m  18: resource "aws_s3_bucket" "site" 4m{0m0m
+33m│0m 0m
+33m│0m 0mUse the aws_s3_bucket_website_configuration resource instead
+33m│0m 0m
+33m│0m 0m(and 14 more similar warnings elsewhere)
+33m╵0m0m
+90m
+─────────────────────────────────────────────────────────────────────────────0m
+
+Note: You didn't use the -out option to save this plan, so Terraform can't
+guarantee to take exactly these actions if you run "terraform apply" now.
