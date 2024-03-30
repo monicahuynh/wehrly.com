@@ -17,23 +17,13 @@ provider "aws" {
 # http://stackoverflow.com/a/5048129/2966951
 resource "aws_s3_bucket" "site" {
   bucket = "${var.domain}"
-  acl = "public-read"
+}
 
-  policy = <<EOF
-    {
-      "Version":"2008-10-17",
-      "Statement":[{
-        "Sid":"AllowPublicRead",
-        "Effect":"Allow",
-        "Principal": {"AWS": "*"},
-        "Action":["s3:GetObject"],
-        "Resource":["arn:aws:s3:::${var.domain}/*"]
-      }]
-    }
-  EOF
+resource "aws_s3_bucket_website_configuration" "site_config" {
+  bucket = aws_s3_bucket.site.id
 
-  website {
-      index_document = "index.html"
+  index_document {
+    suffix = "index.html"
   }
 }
 
