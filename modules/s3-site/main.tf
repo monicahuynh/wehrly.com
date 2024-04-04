@@ -17,6 +17,19 @@ provider "aws" {
 # http://stackoverflow.com/a/5048129/2966951
 resource "aws_s3_bucket" "site" {
   bucket = "${var.domain}"
+  
+  policy = <<EOF
+    {
+      "Version":"2008-10-17",
+      "Statement":[{
+        "Sid":"AllowPublicRead",
+        "Effect":"Allow",
+        "Principal": {"AWS": "*"},
+        "Action":["s3:GetObject"],
+        "Resource":["arn:aws:s3:::${var.domain}/*"]
+      }]
+    }
+  EOF
 }
 
 resource "aws_s3_bucket_website_configuration" "site_config" {
@@ -105,4 +118,8 @@ output "route53_domain" {
 
 output "cdn_domain" {
   value = "${aws_cloudfront_distribution.cdn.domain_name}"
+}
+
+output "bucket_id" {
+  value = "${aws_s3_bucket.site.id}"
 }
