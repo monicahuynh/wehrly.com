@@ -297,26 +297,6 @@
     }
   
   
-    .css-1htxqsx {
-      left: 0;
-      overflow: hidden;
-      position: fixed;
-      top: 0;
-      -webkit-transition: all 0.5s;
-      transition: all 0.5s;
-      width: 100%;
-      z-index: 18;
-      background-color: #ffffff;
-      height: 0;
-    }
-
-    @media (min-width: 768px) {
-      .css-1htxqsx {
-        display: none;
-      }
-    }
-  
-  
     .css-nfosgx {
       padding-top: 56px;
       height: 100vh;
@@ -438,20 +418,12 @@
       }
     }
   
-  
     .css-6hfkfu {
-      display: none;
+      display: block;
+      z-index: 1;
       margin-top: 25px;
     }
-
-    @media (min-width: 768px) {
-      .css-6hfkfu {
-        display: block;
-        z-index: 1;
-      }
-    }
-  
-  
+    
     .css-1bpqnod {
       display: -webkit-box;
       display: -webkit-flex;
