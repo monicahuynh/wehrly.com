@@ -586,6 +586,10 @@
       text-transform: uppercase;
     }
 
+    .css-1bzsx3r a {
+      font-family: Libre Caslon Display;
+    }
+
     @media (min-width: 640px) {
       .css-1bzsx3r {
         -webkit-flex-direction: row;

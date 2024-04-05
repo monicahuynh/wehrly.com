@@ -4,3 +4,10 @@
   top: 0;
   width: 100%;
 }
+
+.css-chmvbz {
+    background-image: url('../img/ring2.png');
+    background-repeat: no-repeat;
+    background-size: contain; /* Make the image cover the div */
+    background-position: 40% /* Center the image inside the div */
+}
