@@ -120,7 +120,7 @@
       font-size: 78px;
       font-weight: 400;
       text-transform: none;
-      padding-top: 170px;
+      padding-top: 10px;
       padding-bottom: 15px;
     }
 
@@ -135,62 +135,7 @@
         font-size: calc(78px * 0.8);
         line-height: 3.0rem;
       }
-    }
-
-    @media(max-width: 1500px) {
-      .css-chmvbz {
-        padding-top: 70px;
-      }
-    }
-
-    @media(max-width: 1280px) {
-      .css-chmvbz {
-        padding-top: 50px;
-      }
-    }
-
-    @media(max-width: 1024px) {
-      .css-chmvbz {
-        padding-top: 40px;
-      }
-    }
-
-    @media(max-width: 768px) {
-      .css-chmvbz {
-        padding-top: 140px;
-      }
-    }
-
-    @media(max-width: 640px) {
-      .css-chmvbz {
-        padding-top: 120px;
-      }
-    }
-
-    @media(max-width: 500px) {
-      .css-chmvbz {
-        padding-top: 100px;
-      }
-    }
-
-    @media(max-width: 420px) {
-      .css-chmvbz {
-        padding-top: 80px;
-      }
-    }
-
-    @media(max-width: 393px) {
-      .css-chmvbz {
-        padding-top: 60px;
-      }
-    }
-
-    @media(min-width: 1920px) {
-      .css-chmvbz {
-        padding-top: 180px;
-      }
-    }
-  
+    }  
   
     .css-1lr9tz3 {
       line-height: 1;
@@ -663,7 +608,7 @@
       width: fit-content;
       font-family: Libre Caslon Display;
       color: #575757;
-      font-size: 40px;
+      font-size: 1rem;
       font-weight: normal;
       letter-spacing: 3px;
       text-transform: uppercase;
@@ -675,18 +620,6 @@
         -ms-flex-direction: row;
         flex-direction: row;
         margin: 52px auto 20px;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .css-1bzsx3r {
-        font-size: calc(40px * 0.75);
-      }
-    }
-
-    @media (max-width: 640px) {
-      .css-1bzsx3r {
-        font-size: 1rem;
       }
     }
   
@@ -742,7 +675,7 @@
         -ms-flex-align: center;
         align-items: center;
         padding: 20px 0 20px 72px;
-        width: 315px;
+        /* width: 315px; */
       }
     }
   
