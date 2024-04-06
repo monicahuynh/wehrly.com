@@ -1,27 +1,5 @@
 
   
-    .css-1c9a4c6 {
-      background-color: #ffffff;
-      -webkit-background-position: top center;
-      background-position: top center;
-      background-repeat: no-repeat;
-      -webkit-background-size: cover;
-      background-size: cover;
-      bottom: 0;
-      left: 0;
-      position: fixed;
-      right: 0;
-      z-index: -1;
-      top: 56px;
-      bottom: -120px;
-    }
-
-    @media (min-width: 768px) {
-      .css-1c9a4c6 {
-        top: 0;
-      }
-    }
-  
   
     .css-15378cj {
       position: relative;
@@ -38,27 +16,7 @@
       -ms-flex-align: center;
       align-items: center;
       pointer-events: auto;
-    }
-  
-  
-    .css-xdcd7r {
-      height: 56px;
-      width: 100%;
-    }
-
-    @media (min-width: 768px) {
-      .css-xdcd7r {
-        display: none;
-      }
-    }
-  
-  
-    @media (min-width: 768px) {
-      .css-1djtsgn {
-        display: none;
-      }
-    }
-  
+    }    
   
     .css-fsfrbf {
       width: 100%;
