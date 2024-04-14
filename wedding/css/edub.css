@@ -11,3 +11,7 @@
     background-size: contain; /* Make the image cover the div */
     background-position: 36% /* Center the image inside the div */
 }
+
+div.wedding-party {
+  margin: 0px 40px;
+}
