@@ -17,7 +17,7 @@ provider "aws" {
 # http://stackoverflow.com/a/5048129/2966951
 resource "aws_s3_bucket" "site" {
   bucket = "${var.domain}"
-  
+
   policy = <<EOF
     {
       "Version":"2008-10-17",
@@ -38,6 +38,15 @@ resource "aws_s3_bucket_website_configuration" "site_config" {
   index_document {
     suffix = "index.html"
   }
+}
+
+resource "aws_s3_bucket_public_access_block" "site_access" {
+  bucket = aws_s3_bucket.site.id
+
+  block_public_acls       = false
+  block_public_policy     = false
+  ignore_public_acls      = false
+  restrict_public_buckets = false
 }
 
 # TODO: Should / can we try to make this something we can pass in from the top ... ?
