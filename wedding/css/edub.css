@@ -14,4 +14,14 @@
 
 div.wedding-party {
   margin: 0px 40px;
+  max-width: 90%;
+}
+
+div.wedding-party img {
+  max-width: 320px;
+  float: left;
+}
+
+div.wedding-party pre {
+  text-wrap: wrap;
 }
