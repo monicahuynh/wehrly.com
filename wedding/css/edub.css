@@ -13,15 +13,22 @@
 }
 
 div.wedding-party {
-  margin: 0px 40px;
+  margin: 0px 20em;
   max-width: 90%;
 }
 
 div.wedding-party img {
-  max-width: 320px;
-  float: left;
+  max-width: 50%;
 }
 
 div.wedding-party pre {
   text-wrap: wrap;
+}
+
+.wedding-party .party-member {
+    display: grid;
+    align-items: center; 
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 5px;
+    margin: 2em 0px;
 }
