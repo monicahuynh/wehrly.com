@@ -18,17 +18,18 @@ div.wedding-party {
 }
 
 div.wedding-party img {
-  max-width: 50%;
+  /* max-width: 50%; */
 }
 
 div.wedding-party pre {
-  text-wrap: wrap;
+  text-wrap: wrap;  
+  grid-column: span 2;
 }
 
 .wedding-party .party-member {
     display: grid;
     align-items: center; 
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 5px;
+    grid-template-columns: 1fr 1.7fr 1fr;
+    column-gap: 2em;
     margin: 2em 0px;
 }
