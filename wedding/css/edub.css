@@ -1,0 +1,35 @@
+.sticky {
+    
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.css-chmvbz {
+    background-image: url('../img/ring2.png');
+    background-repeat: no-repeat;
+    background-size: contain; /* Make the image cover the div */
+    background-position: 36% /* Center the image inside the div */
+}
+
+div.wedding-party {
+  margin: 0px 20em;
+  max-width: 90%;
+}
+
+div.wedding-party img {
+  /* max-width: 50%; */
+}
+
+div.wedding-party pre {
+  text-wrap: wrap;  
+  grid-column: span 2;
+}
+
+.wedding-party .party-member {
+    display: grid;
+    align-items: center; 
+    grid-template-columns: 1fr 1.7fr 1fr;
+    column-gap: 2em;
+    margin: 2em 0px;
+}

@@ -1,0 +1,153 @@
+@font-face {
+    font-display: swap;
+    font-family: union-secondary-font;
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://union.theknot.com/dist/v2/typography/catalyst-v2/font-secondary-regular.woff2) format("woff2"), url(https://union.theknot.com/dist/v2/typography/catalyst-v2/font-secondary-regular.woff) format("woff")
+}
+
+@font-face {
+    font-display: swap;
+    font-family: union-primary-font;
+    font-style: normal;
+    font-weight: 500;
+    src: url(https://union.theknot.com/dist/v2/typography/catalyst-v2/font-primary-bold.woff2) format("woff2"), url(https://union.theknot.com/dist/v2/typography/catalyst-v2/font-primary-bold.woff) format("woff")
+}
+
+@font-face {
+    font-display: swap;
+    font-family: union-primary-font;
+    font-style: normal;
+    font-weight: 700;
+    src: url(https://union.theknot.com/dist/v2/typography/catalyst-v2/font-primary-bold.woff2) format("woff2"), url(https://union.theknot.com/dist/v2/typography/catalyst-v2/font-primary-bold.woff) format("woff")
+}
+
+@font-face {
+    font-display: swap;
+    font-family: union-primary-font;
+    font-style: normal;
+    font-weight: 800;
+    src: url(https://union.theknot.com/dist/v2/typography/catalyst-v2/font-primary-extra-bold.woff2) format("woff2"), url(https://union.theknot.com/dist/v2/typography/catalyst-v2/font-primary-extra-bold.woff) format("woff")
+}
+
+@font-face {
+    font-display: swap;
+    font-family: union-primary-font;
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://union.theknot.com/dist/v2/typography/catalyst-v2/font-primary-regular.woff2) format("woff2"), url(https://union.theknot.com/dist/v2/typography/catalyst-v2/font-primary-regular.woff) format("woff")
+}
+
+:root {
+    --tkww-union-color-primary-100: #ffe4fb;
+    --tkww-union-color-primary-200: #febbf7;
+    --tkww-union-color-primary-300: #ff44cb;
+    --tkww-union-color-primary-400: #d700a0;
+    --tkww-union-color-primary-500: #ac007c;
+    --tkww-union-color-neutral-100: #f1f2f4;
+    --tkww-union-color-neutral-200: #e4e5e9;
+    --tkww-union-color-neutral-300: #caccd0;
+    --tkww-union-color-neutral-400: #9699a0;
+    --tkww-union-color-neutral-500: #51545c;
+    --tkww-union-color-neutral-600: #37393f;
+    --tkww-union-color-neutral-black: #000;
+    --tkww-union-color-neutral-white: #fff;
+    --tkww-union-color-additional-01extra-100: #e6f2fc;
+    --tkww-union-color-additional-01extra-200: #c4dff9;
+    --tkww-union-color-additional-01extra-300: #a1cdf5;
+    --tkww-union-color-additional-01extra-400: #0073e6;
+    --tkww-union-color-additional-01extra-500: #364c9d;
+    --tkww-union-color-additional-02extra-100: #fff7e1;
+    --tkww-union-color-additional-02extra-200: #fdde81;
+    --tkww-union-color-additional-02extra-300: #fbbb03;
+    --tkww-union-color-additional-02extra-400: #fbaf00;
+    --tkww-union-color-additional-02extra-500: #fb8b00;
+    --tkww-union-color-additional-03extra-100: #ffd1bd;
+    --tkww-union-color-additional-03extra-200: #ff9357;
+    --tkww-union-color-additional-03extra-300: #ff6f00;
+    --tkww-union-color-additional-03extra-400: #fa592d;
+    --tkww-union-color-additional-03extra-500: #db4936;
+    --tkww-union-color-additional-04extra-100: #fff5ed;
+    --tkww-union-color-additional-04extra-200: #f7e6dc;
+    --tkww-union-color-additional-04extra-300: #e8d5ca;
+    --tkww-union-color-additional-04extra-400: #c7afa1;
+    --tkww-union-color-additional-04extra-500: #ad9587;
+    --tkww-union-color-status-error-100: #ffece4;
+    --tkww-union-color-status-error-200: #eb1400;
+    --tkww-union-color-status-error-300: #a1000b;
+    --tkww-union-color-status-info-100: #f4f9ff;
+    --tkww-union-color-status-info-200: #0073e6;
+    --tkww-union-color-status-info-300: #114394;
+    --tkww-union-color-status-success-100: #e2ffee;
+    --tkww-union-color-status-success-200: #008a05;
+    --tkww-union-color-status-success-300: #005a25;
+    --tkww-union-color-status-warning-100: #fff3dd;
+    --tkww-union-color-status-warning-200: #c25400;
+    --tkww-union-color-status-warning-300: #823300;
+    --tkww-union-color-tkred-600: var(--tkww-union-color-primary-500);
+    --tkww-union-color-tkred-500: var(--tkww-union-color-primary-500);
+    --tkww-union-color-tkred-400: var(--tkww-union-color-primary-400);
+    --tkww-union-color-tkred-300: var(--tkww-union-color-primary-300);
+    --tkww-union-color-tkred-200: var(--tkww-union-color-primary-200);
+    --tkww-union-color-tkred-100: var(--tkww-union-color-primary-100);
+    --tkww-union-color-midnight: var(--tkww-union-color-neutral-600);
+    --tkww-union-color-coolgray-500: var(--tkww-union-color-neutral-500);
+    --tkww-union-color-coolgray-400: var(--tkww-union-color-neutral-400);
+    --tkww-union-color-coolgray-300: var(--tkww-union-color-neutral-300);
+    --tkww-union-color-coolgray-200: var(--tkww-union-color-neutral-200);
+    --tkww-union-color-coolgray-100: var(--tkww-union-color-neutral-100);
+    --tkww-union-color-white: var(--tkww-union-color-neutral-white);
+    --tkww-union-color-indigo-900: var(--tkww-union-color-additional-01extra-500);
+    --tkww-union-color-indigo-800: var(--tkww-union-color-additional-01extra-400);
+    --tkww-union-color-indigo-700: var(--tkww-union-color-additional-01extra-300);
+    --tkww-union-color-indigo-650: var(--tkww-union-color-additional-01extra-300);
+    --tkww-union-color-indigo-600: var(--tkww-union-color-additional-01extra-200);
+    --tkww-union-color-indigo-500: var(--tkww-union-color-additional-01extra-100);
+    --tkww-union-color-indigo-400: var(--tkww-union-color-additional-01extra-100);
+    --tkww-union-color-gold-900: var(--tkww-union-color-additional-02extra-500);
+    --tkww-union-color-gold-500: var(--tkww-union-color-additional-02extra-400);
+    --tkww-union-color-gold-400: var(--tkww-union-color-additional-02extra-300);
+    --tkww-union-color-gold-300: var(--tkww-union-color-additional-02extra-200);
+    --tkww-union-color-gold-200: var(--tkww-union-color-additional-02extra-100);
+    --tkww-union-color-gold-100: var(--tkww-union-color-additional-02extra-100);
+    --tkww-union-color-raspberry-500: var(--tkww-union-color-primary-500);
+    --tkww-union-color-raspberry-400: var(--tkww-union-color-primary-400);
+    --tkww-union-color-raspberry-300: var(--tkww-union-color-primary-200);
+    --tkww-union-color-raspberry-200: var(--tkww-union-color-primary-100);
+    --tkww-union-color-peach-500: var(--tkww-union-color-additional-03extra-100);
+    --tkww-union-color-peach-400: var(--tkww-union-color-additional-03extra-100);
+    --tkww-union-color-peach-300: var(--tkww-union-color-additional-03extra-100);
+    --tkww-union-color-teal-600: var(--tkww-union-color-status-success-300);
+    --tkww-union-color-teal-500: var(--tkww-union-color-status-success-300);
+    --tkww-union-color-teal-400: var(--tkww-union-color-status-success-200);
+    --tkww-union-color-teal-300: var(--tkww-union-color-status-success-200);
+    --tkww-union-color-teal-200: var(--tkww-union-color-status-success-100);
+    --tkww-union-color-teal-100: var(--tkww-union-color-status-success-100);
+    --tkww-union-color-border-error: var(--tkww-union-color-status-error-200);
+    --tkww-union-color-border-success: var(--tkww-union-color-status-success-200);
+    --tkww-union-color-border-warning: var(--tkww-union-color-status-warning-200);
+    --tkww-union-color-background-error: var(--tkww-union-color-status-error-100);
+    --tkww-union-color-background-warning: var(--tkww-union-color-status-warning-100);
+    --tkww-union-color-background-success: var(--tkww-union-color-status-success-100);
+    --tkww-union-color-background-active: var(--tkww-union-color-additional-04extra-100);
+    --tkww-union-color-background-dark-contrast: var(--tkww-union-color-neutral-400);
+    --tkww-union-color-background-dark: var(--tkww-union-color-neutral-black);
+    --tkww-union-color-text-brand: var(--tkww-union-color-primary-400);
+    --tkww-union-color-text-error: var(--tkww-union-color-status-error-200);
+    --tkww-union-color-text-warning: var(--tkww-union-color-status-warning-200);
+    --tkww-union-color-text-success: var(--tkww-union-color-status-success-200);
+    --tkww-union-color-text-on-dark-default: var(--tkww-union-color-neutral-white);
+    --tkww-union-color-brand-primary: var(--tkww-union-color-primary-300);
+    --tkww-union-color-icon-cta: var(--tkww-union-color-primary-400);
+    --tkww-union-color-icon-default: var(--tkww-union-color-neutral-black);
+    --tkww-union-color-icon-on-dark-default: var(--tkww-union-color-neutral-white);
+    --tkww-union-color-cta-default: var(--tkww-union-color-primary-300);
+    --tkww-union-color-cta-hover: var(--tkww-union-color-primary-400);
+    --tkww-union-color-text-default: var(--tkww-union-color-neutral-black);
+    --tkww-union-color-link-on-light: var(--tkww-union-color-additional-01extra-400);
+    --tkww-union-color-link-on-dark: var(--tkww-union-color-neutral-white)
+}
+
+error {
+    display: none
+}
