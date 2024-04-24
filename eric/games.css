@@ -1,8 +1,15 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: Helvetica, sans-serif;
+}
+
+body > .content {
+    text-align: center;
 }
 
 .pinned-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+    gap: 20px;
     width: 80%;
     margin: 0 auto;
 }
@@ -10,7 +17,7 @@ body {
 .pinned-item {
     border: 1px solid #ddd;
     padding: 20px;
-    margin-bottom: 20px;
+    box-sizing: border-box;
 }
 
 .pinned-item h3 {
