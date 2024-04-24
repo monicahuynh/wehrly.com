@@ -1,0 +1,42 @@
+[
+    {
+        "name": "Not Exactly Sudoku",
+        "repo": "https://github.com/EricWehrly/Sudoku",
+        "description": "I tried to rewrite Sudoku to be remixed like Balatro did for poker. I wound up kind of making Sudoku where you could maybe do weird stuff. The through line for an alternative experience unfortunately never really hit."
+    },
+    {
+        "name": "Bad Actor",
+        "repo": "https://github.com/EricWehrly/BadActor-Blazer",
+        "description": "A game about writing viruses and building a bot farm. Part Cookie Clicker, part Uplink. Ultimately definitely unfinished. Currently, it's in a pre-release version of Blazer and should be upgraded to take advantage of current WebAssembly, and not be a complete pain when developing."
+    },
+    {
+        "name": "Procedural Landmass Generation",
+        "repo": "https://github.com/EricWehrly/Procedural-Landmass-Generation",
+        "description": "Procedurally generates terrain for unity using shader magic and the gpu (for speed). Forked from Sebastian Lague. Modified to work with something else in unity (HDRP? URP? Can't even remember). A bit of a stretch anyways, since it's not really a game, is it?"
+    },
+    {
+        "name": "Hampage",
+        "repo": "https://github.com/EricWehrly/Hampage",
+        "description": "Supposed to be some kind of modern take on Atari's Rampage, trying to build off the joy of World Tour. Sadly, the gameplay never really clicked, and the project fell apart pretty thoroughly. I'm not even sure there's anything useful in the repository."
+    },
+    {
+        "name": "Co-Op Tower Defense",
+        "repo": "https://github.com/EricWehrly/CoOpTowerDefense",
+        "description": "A nothing project (now) basically just setting up a client/server relationship and some form of build tooling. This project uses SharpKit, which was a way to convert C# code to js code, back when that was a thing that people needed to do. The guy who maintained it was actually pretty cool with us. Time marches on."
+    },
+    {
+        "name": "So Many Zombies",
+        "repo": "https://github.com/EricWehrly/SoManyZombies",
+        "description": "By the looks, another attempt to have multiplayer, tower defense, and dumb zombies. This guy is old and probably also doesn't have much inside."
+    },
+    {
+        "name": "GMTK Game Jam 2019",
+        "repo": "https://github.com/EricWehrly/GMTK-Jam-2019",
+        "description": "It looks like I dumped some of my interesting unity scripts in here. My friends and I tried to participate in this jam, deciding to make a game where one plays as a weeb trying to break into Area 51. The player is given an array of sci-fi powers to wreak havoc on the npcs around them. Sadly, the friend that was working on the level had their editor mistakenly in \"play\" mode and was unable to save the work they had done :/"
+    },
+    {
+        "name": "",
+        "repo": "",
+        "description": ""
+    }
+]
