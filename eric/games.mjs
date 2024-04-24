@@ -6,6 +6,9 @@ fetch('games.json')
         const pinnedSection = document.querySelector('.pinned-section');
 
         data.forEach(gameData => {
+
+            if(gameData.name?.length < 1 || gameData.description?.length < 1) return;
+
             const gameElement = document.createElement('div');
             gameElement.classList.add('pinned-item');
             
