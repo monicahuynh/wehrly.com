@@ -11,8 +11,8 @@
     },
     {
         "name": "Procedural Landmass Generation",
-        "repo": "https://github.com/EricWehrly/Procedural-Landmass-Generation",
-        "description": "Procedurally generates terrain for unity using shader magic and the gpu (for speed). Forked from Sebastian Lague. Modified to work with something else in unity (HDRP? URP? Can't even remember). A bit of a stretch anyways, since it's not really a game, is it?"
+        "repo": "https://github.com/EricWehrly/Procedural-Landmass-Generation/tree/LWRP-shader",
+        "description": "Procedurally generates terrain for unity using shader magic and the gpu (for speed). Forked from Sebastian Lague. Modified to work with Unity's Lightweight Render Pipeline. And with the later advent of URP, an important lesson in not putting energy into someone else's beta."
     },
     {
         "name": "Hampage",
@@ -33,6 +33,11 @@
         "name": "GMTK Game Jam 2019",
         "repo": "https://github.com/EricWehrly/GMTK-Jam-2019",
         "description": "It looks like I dumped some of my interesting unity scripts in here. My friends and I tried to participate in this jam, deciding to make a game where one plays as a weeb trying to break into Area 51. The player is given an array of sci-fi powers to wreak havoc on the npcs around them. Sadly, the friend that was working on the level had their editor mistakenly in \"play\" mode and was unable to save the work they had done :/"
+    },
+    {
+        "name": "Soldery",
+        "repo": "https://github.com/EricWehrly/Soldery",
+        "description": "In which I try to make some kind of fun circuit game. Try Electric VLab instead, I think."
     },
     {
         "name": "",
