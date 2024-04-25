@@ -12,7 +12,8 @@ fetch('games.json')
             const gameElement = document.createElement('div');
             gameElement.classList.add('pinned-item');
             
-            const title = document.createElement('h3');
+            const title = document.createElement('a');
+            title.className = "link";
             title.textContent = gameData.name;
             title.href = gameData.repo;
             title.target = "_blank";

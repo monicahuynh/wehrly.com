@@ -1,5 +1,11 @@
+:root {
+    --fgColor-accent: #478be6;
+}
+
 body {
     font-family: Helvetica, sans-serif;
+    background-color: #0D1117;
+    color: #C9D1D9;
 }
 
 body > .content {
@@ -15,17 +21,26 @@ body > .content {
 }
 
 .pinned-item {
-    border: 1px solid #ddd;
+    border: 1px solid #30363D;
+    background-color: #161B22;
     padding: 20px;
     box-sizing: border-box;
 }
 
 .pinned-item h3 {
     margin: 0;
-    color: #0366d6;
+    color: #C9D1D9;
 }
 
 .pinned-item p {
-    margin: 0;
-    color: #586069;
+    margin: .3em 0;
+    color: #8B949E;
+}
+
+.pinned-item > .link {
+    text-decoration: none;
+}
+
+.link {
+    color: var(--fgColor-accent);
 }
