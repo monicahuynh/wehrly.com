@@ -1,11 +1,11 @@
 @media (min-width: 768px) {
-    .menu-mobile {
+    .mobile {
         display: none;
     }
 }
 
 @media (max-width: 767px) {
-    .menu-desktop {
+    .desktop {
         display: none;
     }
 }

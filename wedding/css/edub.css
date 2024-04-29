@@ -1,3 +1,9 @@
+@media (max-width: 767px) {
+  body {
+    margin-top: 60px;
+  }
+}
+
 .sticky {
     
   position: fixed;
