@@ -33,3 +33,8 @@ div.wedding-party pre {
     column-gap: 2em;
     margin: 2em 0px;
 }
+
+.wedding-party .party-member:nth-child(odd) {
+    background-color: #f9f9f9;
+    grid-template-columns: 1fr 1.7fr 1fr;
+}
