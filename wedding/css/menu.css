@@ -1,0 +1,10 @@
+@media (min-width: 768px) {
+    #menu-compressed {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    #menu-fullwidth {
+    }
+}
