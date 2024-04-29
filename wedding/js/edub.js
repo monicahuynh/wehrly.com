@@ -10,8 +10,10 @@ function stupidMobileMenu() {
 
     const button = document.querySelector('.css-bcsx0a');
     const mobileMenu = document.querySelector('.menu.mobile');
+    const menuButton = document.querySelector('.css-cjmnh1');
     button.addEventListener("click", (event) => {
         toggleClass(mobileMenu, 'open');
+        toggleClass(menuButton, 'open');
     });
 }
 

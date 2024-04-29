@@ -25,3 +25,14 @@
 .menu.mobile.open {
     height: 100%;
 }
+
+.css-cjmnh1.open:before {
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px;
+    transform: rotateZ(-45deg);
+}
+
+
+.css-cjmnh1.open:after {
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px;
+    transform: rotateZ(45deg);
+}
