@@ -4,8 +4,7 @@
   }
 }
 
-.sticky {
-    
+.sticky {    
   position: fixed;
   top: 0;
   width: 100%;
@@ -23,10 +22,6 @@ div.wedding-party {
   max-width: 90%;
 }
 
-div.wedding-party img {
-  /* max-width: 50%; */
-}
-
 div.wedding-party pre {
   text-wrap: wrap;  
   grid-column: span 2;
@@ -42,5 +37,4 @@ div.wedding-party pre {
 
 .wedding-party .party-member:nth-child(odd) {
     background-color: #f9f9f9;
-    grid-template-columns: 1fr 1.7fr 1fr;
 }
