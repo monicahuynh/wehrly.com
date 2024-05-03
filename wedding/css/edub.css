@@ -1,3 +1,7 @@
+:root {
+  --member-width: 300px;
+}
+
 @media (max-width: 767px) {
   body {
     margin-top: 60px;
@@ -25,16 +29,17 @@ div.wedding-party {
 div.wedding-party pre {
   text-wrap: wrap;  
   grid-column: span 2;
+  
+  /* background-size: contain; */
+    background-position: left top;
+  background-size: clamp(100px, 80%, var(--member-width)) auto;
+  background-repeat: no-repeat;
+  padding-left: var(--member-width);
 }
 
-.wedding-party .party-member {
-    display: grid;
-    align-items: center; 
-    grid-template-columns: 1fr 1.7fr 1fr;
-    column-gap: 2em;
-    margin: 2em 0px;
-}
-
-.wedding-party .party-member:nth-child(odd) {
+.wedding-party pre:nth-child(odd) {
     background-color: #f9f9f9;
+    background-position: right top;
+    padding-left: 0;
+    padding-right: var(--member-width);
 }
