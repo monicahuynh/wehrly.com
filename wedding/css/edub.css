@@ -22,24 +22,43 @@
 }
 
 div.wedding-party {
-  margin: 0px 20em;
   max-width: 90%;
 }
 
-div.wedding-party pre {
-  text-wrap: wrap;  
-  grid-column: span 2;
+div.wedding-party > * {
+  text-wrap: wrap;
   
-  /* background-size: contain; */
-    background-position: left top;
-  background-size: clamp(100px, 80%, var(--member-width)) auto;
   background-repeat: no-repeat;
-  padding-left: var(--member-width);
 }
 
-.wedding-party pre:nth-child(odd) {
+div.wedding-party > *:nth-child(odd) {
     background-color: #f9f9f9;
-    background-position: right top;
-    padding-left: 0;
-    padding-right: var(--member-width);
+}
+
+/* Desktop */
+@media (min-width: 641px) {
+
+  div.wedding-party > * {    
+    /* background-size: contain; */
+      background-position: left top;
+    background-size: clamp(100px, 80%, var(--member-width)) auto;
+    padding-left: var(--member-width);
+  }
+
+  div.wedding-party > *:nth-child(odd) {
+      background-position: right top;
+      padding-left: 0;
+      padding-right: var(--member-width);
+  }
+}
+
+/* Mobile view */
+@media (max-width: 640px) {
+  
+  div.wedding-party > * {
+    padding: none;
+    background-size: auto clamp(100px, 100%, var(--member-width));
+    padding-top: var(--member-width);
+    /* text-wrap: nowrap */
+  }
 }
