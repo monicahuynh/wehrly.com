@@ -13,6 +13,11 @@ module "wedding-site" {
   domain = "huynh.wehrly.com"
 }
 
+module "lookbook" {
+  source = "./modules/s3-site"
+  domain = "lookbook.wehrly.com"
+}
+
 module "template_files" {
   source = "hashicorp/dir/template"
 
