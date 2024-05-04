@@ -1,0 +1,43 @@
+[
+    {
+        "href": "index.html",
+        "text": "Ceremony"
+    },
+    {
+        "href": "our-story.htm",
+        "text": "Our Story",
+        "rel": "nofollow"
+    },
+    {
+        "href": "https://photos.app.goo.gl/k1E5k78yRY16YtNL7",
+        "text": "Photos",
+        "rel": "nofollow",
+        "target": "_blank"
+    },
+    {
+        "href": "wedding-party.htm",
+        "text": "Wedding Party",
+        "rel": "nofollow"
+    },
+    {
+        "href": "lodging.htm",
+        "text": "Lodging",
+        "rel": "nofollow"
+    },
+    {
+        "href": "https://www.dahlonega.org/things-to-do/",
+        "text": "Things to Do",
+        "rel": "nofollow",
+        "target": "_blank"
+    },
+    {
+        "href": "https://thegivingkitchen.org/give-now",
+        "text": "Registry",
+        "target": "_blank"
+    },
+    {
+        "href": "mailto:wehrly.huynh.romance@gmail.com",
+        "text": "Contact",
+        "target": "_blank"
+    }
+]
