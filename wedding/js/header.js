@@ -1,4 +1,8 @@
+const urlSegments = window.location.pathname.split('/');
+const lastSegment = urlSegments[urlSegments.length - 1];
+
 function buildNavItems() {
+    console.log(window.location.pathname)
     fetch('menu.json')
         .then(response => response.json())
         .then(links => {            
@@ -22,7 +26,11 @@ function addMenuItem(link, nav) {
     li.classList.add('css-haue6f');
 
     const a = document.createElement('a');
-    a.className = 'css-1w7ng4y';
+    if (link.href === lastSegment) {
+        a.className = 'css-4ju79q';
+    } else {
+        a.className = 'css-1w7ng4y';
+    }
     a.setAttribute('href', link.href);
     a.textContent = link.text;
 
