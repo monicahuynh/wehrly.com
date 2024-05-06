@@ -1,5 +1,23 @@
+function toggleClass(element, className) {
+    if(element.classList.contains(className)) {
+        element.classList.remove(className);
+    } else {
+        element.classList.add(className);
+    }
+}
 
-(function () {
+function stupidMobileMenu() {
+
+    const button = document.querySelector('.css-bcsx0a');
+    const mobileMenu = document.querySelector('.menu.mobile');
+    const menuButton = document.querySelector('.css-cjmnh1');
+    button.addEventListener("click", (event) => {
+        toggleClass(mobileMenu, 'open');
+        toggleClass(menuButton, 'open');
+    });
+}
+
+function stickyHeader() {    
     const headers = document.getElementsByClassName("edub-header");
 
     if (headers && headers.length > 0) {
@@ -15,4 +33,11 @@
     } else {
         console.warn(headers)
     }
+}
+
+(function () {
+    // stupidMobileMenu();
+    // stickyHeader();
 })();
+
+setTimeout(stupidMobileMenu, 500);

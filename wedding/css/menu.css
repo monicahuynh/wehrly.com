@@ -1,0 +1,38 @@
+@media (min-width: 768px) {
+    .mobile {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .desktop {
+        display: none;
+    }
+}
+
+.menu.mobile {
+    left: 0px;
+    overflow: hidden;
+    position: fixed;
+    top: 0px;
+    transition: 0.5s;
+    width: 100%;
+    z-index: 18;
+    background-color: rgb(255, 255, 255);
+    height: 0;
+}
+
+.menu.mobile.open {
+    height: 100%;
+}
+
+.css-cjmnh1.open:before {
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px;
+    transform: rotateZ(-45deg);
+}
+
+
+.css-cjmnh1.open:after {
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px;
+    transform: rotateZ(45deg);
+}

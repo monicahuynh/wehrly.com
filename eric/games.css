@@ -1,0 +1,46 @@
+:root {
+    --fgColor-accent: #478be6;
+}
+
+body {
+    font-family: Helvetica, sans-serif;
+    background-color: #0D1117;
+    color: #C9D1D9;
+}
+
+body > .content {
+    text-align: center;
+}
+
+.pinned-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+    gap: 20px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.pinned-item {
+    border: 1px solid #30363D;
+    background-color: #161B22;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.pinned-item h3 {
+    margin: 0;
+    color: #C9D1D9;
+}
+
+.pinned-item p {
+    margin: .3em 0;
+    color: #8B949E;
+}
+
+.pinned-item > .link {
+    text-decoration: none;
+}
+
+.link {
+    color: var(--fgColor-accent);
+}
