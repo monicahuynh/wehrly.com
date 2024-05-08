@@ -53,8 +53,7 @@ function destroyAllNavItems() {
         const navItems = nav.querySelectorAll('li');
 
         navItems.forEach((item) => {
-            // item.remove();
-            item.style.display = 'none';
+            item.remove();
         });
     });
 }
