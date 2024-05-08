@@ -62,3 +62,9 @@ div.wedding-party > *:nth-child(odd) {
     /* text-wrap: nowrap */
   }
 }
+
+#our-story pre {
+  max-width: 100%;
+  text-wrap: pretty;
+  margin-left: 1em;
+}
