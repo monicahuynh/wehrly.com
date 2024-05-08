@@ -4,8 +4,18 @@
         "text": "Ceremony"
     },
     {
+        "href": "rsvp.htm",
+        "text": "RSVP",
+        "rel": "nofollow"
+    },
+    {
         "href": "our-story.htm",
         "text": "Our Story",
+        "rel": "nofollow"
+    },
+    {
+        "href": "wedding-party.htm",
+        "text": "Wedding Party",
         "rel": "nofollow"
     },
     {
@@ -13,11 +23,6 @@
         "text": "Photos",
         "rel": "nofollow",
         "target": "_blank"
-    },
-    {
-        "href": "wedding-party.htm",
-        "text": "Wedding Party",
-        "rel": "nofollow"
     },
     {
         "href": "lodging.htm",

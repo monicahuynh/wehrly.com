@@ -3,7 +3,7 @@
   
     .css-15378cj {
       position: relative;
-      min-height: 100vh;
+      /* min-height: 100vh; */
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -975,15 +975,9 @@
       text-transform: none;
     }
 
-    @media (max-width: 640px) {
-      .css-144vr5q {
-        font-size: calc(78px * 0.75);
-      }
-    }
-
     @media(max-width: 640px) {
       .css-144vr5q {
-        font-size: calc(78px * 0.8);
+        font-size: calc(76px * 0.8);
         line-height: 3.0rem;
       }
     }
@@ -998,12 +992,6 @@
       font-weight: 400;
       text-transform: uppercase;
       border-top: 1px solid #575757;
-    }
-
-    @media (max-width: 640px) {
-      .css-3m1t7i {
-        font-size: calc(19px * 0.75);
-      }
     }
 
     @media(max-width: 640px) {
