@@ -30,3 +30,8 @@ module "wedding-site" {
 
   filedir = "${path.module}/wedding"
 }
+
+module "lookbook-site" {
+  source = "./modules/s3-site"
+  domain = "lookbook.wehrly.com"
+}
