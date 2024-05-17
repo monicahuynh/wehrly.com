@@ -131,7 +131,7 @@
   
   
     .css-ou2xl5 {
-      padding: 0 4% 10px 4%;
+      padding: 0;
       text-align: center;
       z-index: 1;
       display: none;
@@ -323,6 +323,10 @@
       border-bottom: 2px solid #575757;
     }
 
+    .css-4ju79q:hover {
+      text-decoration: none;
+    }
+
     @media (max-width: 640px) {
       .css-4ju79q {
         font-size: calc(17px * 0.875);
@@ -374,7 +378,6 @@
     .css-6hfkfu {
       display: block;
       z-index: 1;
-      margin-top: 25px;
     }
     
     .css-1bpqnod {
