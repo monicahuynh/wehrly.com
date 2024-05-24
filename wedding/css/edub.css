@@ -57,9 +57,9 @@ div.wedding-party > *:nth-child(odd) {
 @media (max-width: 640px) {
   
   div.wedding-party > * {
-    padding: none;
+    padding: 0px;
     background-size: auto clamp(100px, 100%, var(--member-width));
-    padding-top: var(--member-width);
+    padding-top: calc(var(--member-width) + 8px);
     background-position-x: center;
     /* text-wrap: nowrap */
   }
