@@ -41,14 +41,17 @@ div.wedding-party > *:nth-child(odd) {
   div.wedding-party > * {
     background-position: left center;
     background-size: clamp(100px, 80%, var(--member-width)) auto;
-    padding-left: var(--member-width);
+    padding-left: calc(var(--member-width) + 8px);
     box-shadow: 0 0 4px 4px white inset;
+    min-height: 280px;
+    align-items: center;
+    display: flex;
   }
 
   div.wedding-party > *:nth-child(odd) {
       background-position: right center;
       padding-left: 0;
-      padding-right: var(--member-width);
+      padding-right: calc(var(--member-width) + 8px);
       box-shadow: 0 0 4px 4px white inset;
   }
 }
