@@ -68,10 +68,24 @@ div.wedding-party > *:nth-child(odd) {
   }
 }
 
-#our-story pre {
+#our-story pre, #lodging p {
   max-width: 100%;
   text-wrap: pretty;
   margin-left: 1em;
+}
+
+#lodging p {
+  max-width: 80%;
+  margin: 1em 2em;
+  text-align: center;
+}
+
+#lodging p a {
+  color: var(--tkww-union-links-default-color, var(--tkww-union-color-link-on-light, var(--tkww-union-color-additional-01extra-400, #0073E6)))
+}
+
+#lodging br {
+  line-height: 1.2em;
 }
 
 /* affects headings */ 
