@@ -60,6 +60,7 @@ div.wedding-party > *:nth-child(odd) {
     padding: none;
     background-size: auto clamp(100px, 100%, var(--member-width));
     padding-top: var(--member-width);
+    background-position-x: center;
     /* text-wrap: nowrap */
   }
 }
