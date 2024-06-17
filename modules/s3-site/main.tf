@@ -62,6 +62,18 @@ resource "aws_route53_record" "root_domain" {
   }
 }
 
+resource "aws_route53_record" "www_domain" {
+  zone_id = "${aws_route53_zone.main.zone_id}"
+  name = "www.${var.domain}"
+  type = "CNAME"
+
+  alias {
+    name = "www.${aws_cloudfront_distribution.cdn.domain_name}"
+    zone_id = "${aws_cloudfront_distribution.cdn.hosted_zone_id}"
+    evaluate_target_health = false
+  }
+}
+
 resource "aws_cloudfront_distribution" "cdn" {
   origin {
     origin_id   = "${var.domain}"
