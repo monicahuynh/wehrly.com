@@ -4,9 +4,10 @@
         "text": "Ceremony"
     },
     {
-        "href": "rsvp.htm",
+        "href": "https://www.theknot.com/us/eric-wehrly-and-monica-huynh-nov-2024/rsvp",
         "text": "RSVP",
-        "rel": "nofollow"
+        "rel": "nofollow",
+        "target": "_blank"
     },
     {
         "href": "our-story.htm",
@@ -36,9 +37,9 @@
         "target": "_blank"
     },
     {
-        "href": "https://thegivingkitchen.org/give-now",
+        "href": "registry.htm",
         "text": "Registry",
-        "target": "_blank"
+        "rel": "nofollow"
     },
     {
         "href": "mailto:wehrly.huynh.romance@gmail.com",

@@ -8,6 +8,10 @@
   }
 }
 
+a {
+  text-decoration: underline;
+}
+
 .sticky {    
   position: fixed;
   top: 0;
