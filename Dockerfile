@@ -1,10 +1,9 @@
-FROM node:lts-alpine
+FROM httpd:alpine
 
-EXPOSE 5000
-ENV PORT 5000
+EXPOSE 8080
 
-WORKDIR /app
+WORKDIR /usr/local/apache2/htdocs/
 
-ADD . .
+# ADD . .
 
-CMD ["node", "index.html"]
+# CMD ["node", "http-server -o index.html"]
