@@ -85,7 +85,7 @@ resource "aws_cloudfront_distribution" "cdn" {
 
   enabled             = true
   default_root_object = "index.html"
-
+  http_version = "http2and3"
   default_cache_behavior {
     allowed_methods  = ["GET", "HEAD", "OPTIONS"]
     cached_methods   = ["GET", "HEAD"]
@@ -118,6 +118,7 @@ resource "aws_cloudfront_distribution" "cdn" {
   viewer_certificate {
     acm_certificate_arn = "arn:aws:acm:us-east-1:428933486948:certificate/1f1c2305-429b-4889-8b08-77ce681f18b1"
     ssl_support_method = "sni-only"
+    minimum_protocol_version = "TLSv1.2_2021"
   }
 }
 
