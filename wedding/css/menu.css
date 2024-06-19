@@ -10,6 +10,10 @@
     }
 }
 
+.menu.desktop {
+    padding-bottom: 2em;
+}
+
 .menu.mobile {
     left: 0px;
     overflow: hidden;

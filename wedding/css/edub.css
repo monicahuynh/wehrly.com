@@ -58,6 +58,12 @@ div.wedding-party > *:nth-child(odd) {
       padding-right: calc(var(--member-width) + 8px);
       box-shadow: 0 0 4px 4px white inset;
   }
+  
+  .css-rzmzie {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 /* Mobile view */
